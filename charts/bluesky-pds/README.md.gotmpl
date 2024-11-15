@@ -24,7 +24,7 @@ export PDS_HOSTNAME=pds.example.com
 curl --silent --show-error --request POST --header "Content-Type: application/json" "$@" \
     --user "admin:${ADMINPW}" \
     --data '{"useCount": 1}' \
-    "https://pds.example.com/xrpc/com.atproto.server.createInviteCode" | jq --raw-output '.code'
+    "https://${PDS_HOSTNAME}/xrpc/com.atproto.server.createInviteCode" | jq --raw-output '.code'
 ```
 
 ### Create account
